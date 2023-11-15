@@ -12,4 +12,6 @@ how to open php/xampp stuff:
 $conn = new mysqli('your_host', 'your_username', 'your_password', 'your_database');
 $conn = new mysqli('localhost', 'root', '', 'your_database');
 
-5. create a databse with that name and tables
+5. create a database with that name and tables
+
+ctrl+space for intellisense on vscode
