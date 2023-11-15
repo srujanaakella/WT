@@ -15,3 +15,6 @@ $conn = new mysqli('localhost', 'root', '', 'your_database');
 5. create a database with that name and tables
 
 ctrl+space for intellisense on vscode
+
+
+login and sign up page: https://speedysense.com/create-registration-login-system-php-mysql/
