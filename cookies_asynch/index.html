@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="checkUsername.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>User Registration Form</h2>
+        <form id="registrationForm" onsubmit="registerUser(); return false;" enctype="multipart/form-data">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required onkeyup="checkUsernameAvailability()">
+            <span id="usernameAvailability"></span><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="password">Password (at least one special character):</label>
+            <input type="password" id="password" name="password" pattern=".*[^A-Za-z0-9].*" required>
+            <span id="passwordValidation"></span><br>
+
+            <label for="file">Upload File:</label>
+            <input type="file" id="file" name="file" accept=".txt, .pdf, .doc"><br>
+
+            <input type="submit" value="Register">
+        </form>
+
+        <div id="registrationResult"></div>
+    </div>
+</body>
+</html>
