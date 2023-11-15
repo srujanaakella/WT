@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration and Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="checkUsername.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>User Registration and Login</h2>
+        <div id="registrationSection">
+            <h3>Register</h3>
+            <form id="registrationForm" onsubmit="registerUser(); return false;" enctype="multipart/form-data">
+                <!-- Registration form fields as before -->
+
+                <input type="submit" value="Register">
+            </form>
+            <div id="registrationResult"></div>
+        </div>
+
+        <div id="loginSection">
+            <h3>Login</h3>
+            <form id="loginForm" onsubmit="loginUser(); return false;">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+
+                <input type="submit" value="Login">
+            </form>
+            <div id="loginResult"></div>
+        </div>
+
+        <div id="uploadSection" style="display: none;">
+            <h3>Upload File</h3>
+            <form id="uploadForm" onsubmit="uploadFile(); return false;" enctype="multipart/form-data">
+                <!-- File upload form fields as before -->
+
+                <input type="submit" value="Upload">
+            </form>
+            <div id="uploadResult"></div>
+        </div>
+    </div>
+    <script src="login.js" defer></script>
+    <script src="uploadFile.js" defer></script>
+</body>
+</html>
